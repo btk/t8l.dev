@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="465" height="137" viewBox="0 0 465 137">
+  <defs>
+    <clipPath id="clip-logo_dark">
+      <rect width="465" height="137"/>
+    </clipPath>
+  </defs>
+  <g id="logo_dark" clip-path="url(#clip-logo_dark)">
+    <text id="t_l.dev" data-name="t    l.dev" transform="translate(135 95)" fill="rgba(0,0,0,0.7)" font-size="70" font-family="Kamerik205-Regular3, Kamerik205" letter-spacing="0.015em"><tspan x="0" y="0" xml:space="preserve">t    l</tspan><tspan y="0">.dev</tspan></text>
+    <text id="_" data-name="∞" transform="translate(153 112)" font-size="130" font-family="Kamerik205-Regular3, Kamerik205"><tspan x="0" y="0">∞</tspan></text>
+    <text id="_2" data-name="∞" transform="translate(32 107.5)" font-size="130" font-family="Kamerik205-Regular3, Kamerik205"><tspan x="0" y="0">∞</tspan></text>
+    <text id="_3" data-name="∞" transform="translate(39.5 22) rotate(90)" font-size="130" font-family="Kamerik205-Regular3, Kamerik205"><tspan x="0" y="0">∞</tspan></text>
+  </g>
+</svg>

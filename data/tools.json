@@ -1,0 +1,52 @@
+{
+  "tools": [
+    {
+      "name": "SVG API",
+      "description": "Rest API to search and list wide variety of icons. Build awesome stuff with free and maker-friendly pricing points.",
+      "url": "https://www.svgapi.com",
+      "category": "API"
+    },
+    {
+      "name": "Open Design License",
+      "description": "Open Design is accessible to anyone who is able to get, use, change, and share it, as long as it is kept track of, not redistributed in the same way",
+      "url": "https://opendesignlicense.org",
+      "category": "License"
+    },
+    {
+      "name": "SVG Find",
+      "description": "Explore our vast vector library and find the perfect icons or vectors for your projects. Edit them to your desire and download them.",
+      "url": "https://www.svgfind.com",
+      "category": "Search"
+    },
+    {
+      "name": "Vector Mixer",
+      "description": "A vector mixing application that has tools to customize attributes such as size, color, background, and other characteristics of a vectors",
+      "url": "https://www.vectormixer.com",
+      "category": "Editor"
+    },
+    {
+      "name": "SVG Vector Editor",
+      "description": "A vector editor tool, that allows you to change properties like size, color, background, and other attributes of a vector images.",
+      "url": "https://www.svgvector.com",
+      "category": "Editor"
+    },
+    {
+      "name": "Text2Icon",
+      "description": "text2icon is an AI web app that generates icons based on given text in black and white color palette, and allows you to download SVG.",
+      "url": "https://www.text2icon.com",
+      "category": "Generator"
+    },
+    {
+      "name": "Carbon Neutral Website",
+      "description": "A carbon emission calculator that takes into account the power consumption of device and server during browsing a web page.",
+      "url": "https://www.carbonneutralwebsite.com",
+      "category": "Analytics"
+    },
+    {
+      "name": "VectorMaker",
+      "description": "Convert images to SVG vectors, PNG-to-SVG Vectors. Vectormaker outlines your pixel based images and turns them into colored SVG vector files.",
+      "url": "https://www.vectormaker.com",
+      "category": "Converter"
+    }
+  ]
+} 
