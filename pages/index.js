@@ -106,7 +106,7 @@ export default function DeveloperTools() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                     selectedCategory === category
-                      ? 'bg-[#00ffcc] text-black'
+                      ? 'bg-[#2563eb] text-white'
                       : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                   }`}
                 >
