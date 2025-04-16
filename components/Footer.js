@@ -10,12 +10,10 @@ export default function Footer() {
         <div className="py-6">
           <div className="text-center space-x-4">
             <Link 
-              href="https://buraktokak.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/"
               className="text-gray-400 hover:text-white transition-colors duration-300 text-sm inline-block"
             >
-              © 2025 - Burak Tokak
+              © 2025 t8l.dev
             </Link>
             <span className="text-gray-600">•</span>
             <Link 
