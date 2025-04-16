@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function LogoHeader() {
   return (
@@ -9,14 +10,16 @@ export default function LogoHeader() {
       transition={{ duration: 0.8 }}
       className="flex justify-center mb-12"
     >
-      <Image
-        src="/logo_white.png"
-        alt="t8l.dev logo"
-        width={155}
-        height={45.67}
-        className="h-auto"
-        priority
-      />
+      <Link href="/">
+        <Image
+          src="/logo_white.png"
+          alt="t8l.dev logo"
+          width={155}
+          height={45.67}
+          className="h-auto cursor-pointer hover:opacity-80 transition-opacity duration-300"
+          priority
+        />
+      </Link>
     </motion.div>
   );
 } 
