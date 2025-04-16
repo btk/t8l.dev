@@ -2,19 +2,42 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
+import { useState } from 'react';
 import toolsData from '../data/tools.json';
 import Footer from '../components/Footer';
 
+// Category emoji mapping
+const categoryEmojis = {
+  'All': '✨',
+  'API': '🔌',
+  'License': '📜',
+  'Search': '🔍',
+  'Editor': '✏️',
+  'Generator': '⚡',
+  'Analytics': '📊',
+  'Converter': '🔄'
+};
+
 export default function DeveloperTools() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  
+  // Get unique categories
+  const categories = ['All', ...new Set(toolsData.tools.map(tool => tool.category))];
+  
+  // Filter tools based on selected category
+  const filteredTools = selectedCategory === 'All' 
+    ? toolsData.tools 
+    : toolsData.tools.filter(tool => tool.category === selectedCategory);
+
   return (
     <>
       <Head>
-        <title>t8l.dev - Developer Tools</title>
+        <title>t8l.dev - Impactful Developer Tools</title>
         <meta name="description" content="A collection of free developer tools created by t8l.dev for developers, designers, and creators. All tools are free or have generous free tiers." />
         <meta name="keywords" content="developer tools, design tools, free tools, web development, design resources, SVG tools, vector tools" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="t8l.dev - Developer Tools" />
+        <meta property="og:title" content="t8l.dev - Impactful Developer Tools" />
         <meta property="og:description" content="A collection of free developer tools created by t8l.dev for developers, designers, and creators." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://t8l.dev/" />
@@ -22,7 +45,7 @@ export default function DeveloperTools() {
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="t8l.dev - Developer Tools" />
+        <meta name="twitter:title" content="t8l.dev - Impactful Developer Tools" />
         <meta name="twitter:description" content="A collection of free developer tools created by t8l.dev for developers, designers, and creators." />
         <meta name="twitter:image" content="https://t8l.dev/logo_white.png" />
 
@@ -70,13 +93,31 @@ export default function DeveloperTools() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl font-semibold mb-8 text-center">Developer Tools</h1>
+            <h1 className="text-4xl font-semibold mb-8 text-center">Impactful Developer Tools</h1>
             <p className="text-xl text-gray-400 mb-12 text-center max-w-3xl mx-auto">
               A list of tools we made for developers, designers, and creators. All tools are free or have generous free tiers.
             </p>
 
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-2 mb-8">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                    selectedCategory === category
+                      ? 'bg-[#00ffcc] text-black'
+                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                  }`}
+                >
+                  <span className="mr-1">{categoryEmojis[category]}</span>
+                  {category}
+                </button>
+              ))}
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {toolsData.tools.map((tool, index) => (
+              {filteredTools.map((tool, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -87,7 +128,8 @@ export default function DeveloperTools() {
                 >
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-xl font-semibold text-white">{tool.name}</h3>
-                    <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
+                    <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full whitespace-nowrap">
+                      <span className="mr-1">{categoryEmojis[tool.category]}</span>
                       {tool.category}
                     </span>
                   </div>
