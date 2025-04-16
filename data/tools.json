@@ -1,6 +1,18 @@
 {
   "tools": [
     {
+      "name": "Site Manifest Generator",
+      "description": "Create compliant PWA manifests in seconds with smart color extraction, icon generation, and website analysis for progressive web applications.",
+      "url": "https://sitemanifest.t8l.dev/",
+      "category": "Generator"
+    },
+    {
+      "name": "MeltingFace",
+      "description": "AI-powered concept visualizer and creative tool that helps you discover colors, emojis, and fonts to get unstuck in your creative process.",
+      "url": "https://www.meltingface.org/",
+      "category": "Generator"
+    },
+    {
       "name": "SVG API",
       "description": "Rest API to search and list wide variety of icons. Build awesome stuff with free and maker-friendly pricing points.",
       "url": "https://www.svgapi.com",
