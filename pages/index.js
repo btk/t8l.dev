@@ -5,17 +5,27 @@ import Head from 'next/head';
 import { useState } from 'react';
 import toolsData from '../data/tools.json';
 import Footer from '../components/Footer';
+import {
+  SparklesIcon,
+  BoltIcon,
+  DocumentTextIcon,
+  MagnifyingGlassIcon,
+  PencilSquareIcon,
+  ChartBarIcon,
+  ArrowPathIcon,
+  CpuChipIcon
+} from '@heroicons/react/24/outline';
 
-// Category emoji mapping
-const categoryEmojis = {
-  'All': '✨',
-  'API': '🔌',
-  'License': '📜',
-  'Search': '🔍',
-  'Editor': '✏️',
-  'Generator': '⚡',
-  'Analytics': '📊',
-  'Converter': '🔄'
+// Category icon mapping
+const categoryIcons = {
+  'All': SparklesIcon,
+  'API': CpuChipIcon,
+  'License': DocumentTextIcon,
+  'Search': MagnifyingGlassIcon,
+  'Editor': PencilSquareIcon,
+  'Generator': BoltIcon,
+  'Analytics': ChartBarIcon,
+  'Converter': ArrowPathIcon
 };
 
 export default function DeveloperTools() {
@@ -100,50 +110,56 @@ export default function DeveloperTools() {
 
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-2 mb-8">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
-                    selectedCategory === category
-                      ? 'bg-[#2563eb] text-white'
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                  }`}
-                >
-                  <span className="mr-1">{categoryEmojis[category]}</span>
-                  {category}
-                </button>
-              ))}
+              {categories.map((category) => {
+                const Icon = categoryIcons[category];
+                return (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap flex items-center gap-1.5 ${
+                      selectedCategory === category
+                        ? 'bg-[#2563eb] text-white'
+                        : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                    }`}
+                  >
+                    <Icon className="w-4 h-4" />
+                    {category}
+                  </button>
+                );
+              })}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredTools.map((tool, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
-                  className="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-white">{tool.name}</h3>
-                    <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full whitespace-nowrap">
-                      <span className="mr-1">{categoryEmojis[tool.category]}</span>
-                      {tool.category}
-                    </span>
-                  </div>
-                  <p className="text-gray-400 mb-4">{tool.description}</p>
-                  <Link 
-                    href={tool.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
+              {filteredTools.map((tool, index) => {
+                const Icon = categoryIcons[tool.category];
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    whileHover={{ y: -5 }}
+                    className="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-all duration-300"
                   >
-                    Visit Website →
-                  </Link>
-                </motion.div>
-              ))}
+                    <div className="flex items-start justify-between mb-4">
+                      <h3 className="text-xl font-semibold text-white">{tool.name}</h3>
+                      <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full whitespace-nowrap flex items-center gap-1.5">
+                        <Icon className="w-4 h-4" />
+                        {tool.category}
+                      </span>
+                    </div>
+                    <p className="text-gray-400 mb-4">{tool.description}</p>
+                    <Link 
+                      href={tool.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
+                    >
+                      Visit Website →
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>
