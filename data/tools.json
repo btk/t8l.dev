@@ -33,7 +33,7 @@
     {
       "name": "SVG API",
       "description": "Rest API to search and list wide variety of icons. Build awesome stuff with free and maker-friendly pricing points.",
-      "url": "https://www.svgapi.com",
+      "url": "https://svgapi.com/",
       "category": "API"
     },
     {
@@ -55,27 +55,21 @@
       "category": "Editor"
     },
     {
-      "name": "SVG Vector Editor",
-      "description": "A vector editor tool, that allows you to change properties like size, color, background, and other attributes of a vector images.",
-      "url": "https://www.svgvector.com",
-      "category": "Editor"
-    },
-    {
       "name": "Text2Icon",
       "description": "text2icon is an AI web app that generates icons based on given text in black and white color palette, and allows you to download SVG.",
-      "url": "https://www.text2icon.com",
+      "url": "https://text2icon.app",
       "category": "Generator"
     },
     {
       "name": "Carbon Neutral Website",
       "description": "A carbon emission calculator that takes into account the power consumption of device and server during browsing a web page.",
-      "url": "https://www.carbonneutralwebsite.com",
+      "url": "https://www.carbonneutralwebsite.org",
       "category": "Analytics"
     },
     {
       "name": "VectorMaker",
       "description": "Convert images to SVG vectors, PNG-to-SVG Vectors. Vectormaker outlines your pixel based images and turns them into colored SVG vector files.",
-      "url": "https://www.vectormaker.com",
+      "url": "https://vectormaker.co/",
       "category": "Converter"
     }
   ]

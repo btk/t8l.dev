@@ -27,6 +27,7 @@ const categoryIcons = {
 const ToolsGrid = ({ tools }) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [filterKey, setFilterKey] = useState(0);
   
   // Get unique categories
   const categories = ['All', ...new Set(tools.map(tool => tool.category))];
@@ -40,6 +41,14 @@ const ToolsGrid = ({ tools }) => {
     return matchesCategory && matchesSearch;
   });
 
+  const handleSearchChange = (e) => {
+    const newQuery = e.target.value;
+    setSearchQuery(newQuery);
+    if (newQuery === '') {
+      setFilterKey(prev => prev + 1);
+    }
+  };
+
   return (
     <div>
       {/* Search Bar */}
@@ -50,7 +59,7 @@ const ToolsGrid = ({ tools }) => {
             type="text"
             placeholder="Search tools by name or description..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={handleSearchChange}
             className="w-full pl-10 pr-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
           />
         </div>
@@ -81,7 +90,7 @@ const ToolsGrid = ({ tools }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredTools.map((tool, index) => (
           <ToolCard
-            key={index}
+            key={`${tool.name}-${filterKey}`}
             tool={tool}
             index={index}
             Icon={categoryIcons[tool.category]}
