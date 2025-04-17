@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import toolsData from '../data/tools.json';
 import Footer from '../components/Footer';
+import SocialShare from '../components/SocialShare';
 import {
   SparklesIcon,
   BoltIcon,
@@ -180,6 +181,25 @@ export default function DeveloperTools() {
                 );
               })}
             </div>
+
+            {/* Social Share Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="mt-16 text-center"
+            >
+              <h2 className="text-2xl font-semibold mb-6">Share t8l.dev</h2>
+              <div className="flex justify-center">
+                <SocialShare 
+                  tool={{
+                    name: "t8l.dev",
+                    description: "A collection of free developer tools created by t8l.dev for developers, designers, and creators.",
+                    url: "https://t8l.dev"
+                  }} 
+                />
+              </div>
+            </motion.div>
           </motion.div>
         </div>
         <Footer />
