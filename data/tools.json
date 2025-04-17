@@ -1,6 +1,18 @@
 {
   "tools": [
     {
+      "name": "Icon Repo",
+      "description": "Search, find and edit web's free open-licensed Icons. Explore our vast icon library with 250K+ icons, edit them however you like and download them for free to use for commercial purposes.",
+      "url": "https://www.iconrepo.com/",
+      "category": "Search"
+    },
+    {
+      "name": "SVG Repo",
+      "description": "Free SVG vectors and icons. Search, explore and edit the best-fitting free icons or vectors for your projects using this collection of 500,000+ Open-licensed SVG vectors and icons.",
+      "url": "https://www.svgrepo.com",
+      "category": "Search"
+    },
+    {
       "name": "Site Manifest Generator",
       "description": "Create compliant PWA manifests in seconds with smart color extraction, icon generation, and website analysis for progressive web applications.",
       "url": "https://sitemanifest.t8l.dev/",
