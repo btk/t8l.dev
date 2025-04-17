@@ -1,6 +1,12 @@
 {
   "tools": [
     {
+      "name": "Steam Review Analyzer",
+      "description": "Get AI-powered insights from Steam game reviews. Analyze reviews by type (Most Helpful, Last Update, Positive Only, Negative Only) and gain valuable insights about any Steam game.",
+      "url": "https://steamreviewanalyzer.t8l.dev/",
+      "category": "Analytics"
+    },
+    {
       "name": "Icon Repo",
       "description": "Search, find and edit web's free open-licensed Icons. Explore our vast icon library with 250K+ icons, edit them however you like and download them for free to use for commercial purposes.",
       "url": "https://www.iconrepo.com/",
