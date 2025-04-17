@@ -6,6 +6,7 @@ import { useState } from 'react';
 import toolsData from '../data/tools.json';
 import Footer from '../components/Footer';
 import SocialShare from '../components/SocialShare';
+import ToolsGrid from '../components/ToolsGrid';
 import {
   SparklesIcon,
   BoltIcon,
@@ -114,73 +115,7 @@ export default function DeveloperTools() {
               A list of tools we made for developers, designers, and creators. All tools are free or have generous free tiers.
             </p>
 
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search tools by name or description..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                />
-              </div>
-            </div>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-2 mb-8">
-              {categories.map((category) => {
-                const Icon = categoryIcons[category];
-                return (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap flex items-center gap-1.5 ${
-                      selectedCategory === category
-                        ? 'bg-[#2563eb] text-white'
-                        : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                    }`}
-                  >
-                    <Icon className="w-4 h-4" />
-                    {category}
-                  </button>
-                );
-              })}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredTools.map((tool, index) => {
-                const Icon = categoryIcons[tool.category];
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ y: -5 }}
-                    className="bg-[#1a1a1a] p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-all duration-300"
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <h3 className="text-xl font-semibold text-white">{tool.name}</h3>
-                      <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full whitespace-nowrap flex items-center gap-1.5">
-                        <Icon className="w-4 h-4" />
-                        {tool.category}
-                      </span>
-                    </div>
-                    <p className="text-gray-400 mb-4">{tool.description}</p>
-                    <Link 
-                      href={tool.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
-                    >
-                      Visit Website →
-                    </Link>
-                  </motion.div>
-                );
-              })}
-            </div>
+            <ToolsGrid tools={toolsData.tools} />
 
             {/* Social Share Section */}
             <motion.div
