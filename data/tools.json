@@ -1,6 +1,12 @@
 {
   "tools": [
     {
+      "name": "TinySVG",
+      "description": "Optimize and simplify your SVG files with precision. Remove metadata, inline styles, collapse groups, and more to make your SVGs smaller and cleaner.",
+      "url": "https://tinysvg.t8l.dev/",
+      "category": "Converter"
+    },
+    {
       "name": "Steam Review Analyzer",
       "description": "Get AI-powered insights from Steam game reviews. Analyze reviews by type (Most Helpful, Last Update, Positive Only, Negative Only) and gain valuable insights about any Steam game.",
       "url": "https://steamreviewanalyzer.t8l.dev/",

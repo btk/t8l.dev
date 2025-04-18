@@ -5,6 +5,7 @@ const nextConfig = {
       't8l.dev',
       'steamreviewanalyzer.t8l.dev',
       'sitemanifest.t8l.dev',
+      'tinysvg.t8l.dev',
       'www.iconrepo.com',
       'www.svgrepo.com',
       'svgapi.com',
