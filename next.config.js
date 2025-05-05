@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     domains: [
+      'onepager.t8l.dev',
       't8l.dev',
       'steamreviewanalyzer.t8l.dev',
       'sitemanifest.t8l.dev',

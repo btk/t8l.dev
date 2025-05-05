@@ -1,6 +1,12 @@
 {
   "tools": [
     {
+      "name": "One Pager",
+      "description": "Create concise and effective game design documents. Capture essential aspects of your game including identity, one-liner, core concept, gameplay actions, and what makes your game unique.",
+      "url": "https://onepager.t8l.dev/",
+      "category": "Generator"
+    },
+    {
       "name": "TinySVG",
       "description": "Optimize and simplify your SVG files with precision. Remove metadata, inline styles, collapse groups, and more to make your SVGs smaller and cleaner.",
       "url": "https://tinysvg.t8l.dev/",
