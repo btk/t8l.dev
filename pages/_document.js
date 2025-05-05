@@ -5,7 +5,6 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="A collection of free developer tools created by t8l.dev for developers, designers, and creators. All tools are free or have generous free tiers." />
         <meta name="keywords" content="developer tools, design tools, free tools, web development, design resources, SVG tools, vector tools" />
         <meta name="author" content="t8l.dev" />
