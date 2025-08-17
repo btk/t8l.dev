@@ -9,7 +9,8 @@ import {
   PencilSquareIcon,
   ChartBarIcon,
   ArrowPathIcon,
-  CpuChipIcon
+  CpuChipIcon,
+  ClipboardDocumentListIcon
 } from '@heroicons/react/24/outline';
 
 // Category icon mapping
@@ -21,7 +22,8 @@ const categoryIcons = {
   'Editor': PencilSquareIcon,
   'Generator': BoltIcon,
   'Analytics': ChartBarIcon,
-  'Converter': ArrowPathIcon
+  'Converter': ArrowPathIcon,
+  'Checklist': ClipboardDocumentListIcon
 };
 
 const ToolsGrid = ({ tools }) => {
