@@ -1,6 +1,12 @@
 {
   "tools": [
     {
+      "name": "Singularity",
+      "description": "Create stunning AI-generated images with advanced prompts and customization options. Transform your ideas into visual art using cutting-edge AI technology.",
+      "url": "https://singularity.t8l.dev/",
+      "category": "Generator"
+    },
+    {
       "name": "One Pager",
       "description": "Create concise and effective game design documents. Capture essential aspects of your game including identity, one-liner, core concept, gameplay actions, and what makes your game unique.",
       "url": "https://onepager.t8l.dev/",
