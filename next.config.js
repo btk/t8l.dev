@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     domains: [
+      'steamcapsule.t8l.dev',
       'singularity.t8l.dev',
       'onepager.t8l.dev',
       't8l.dev',

@@ -1,6 +1,12 @@
 {
   "tools": [
     {
+      "name": "Steam Capsule Analyzer",
+      "description": "Professional analysis tool for optimizing your Steam capsule art. Get detailed insights on title placement, color distribution, and visual balance with advanced scoring algorithms.",
+      "url": "https://steamcapsule.t8l.dev/",
+      "category": "Analytics"
+    },
+    {
       "name": "Singularity",
       "description": "Master the coming intelligence explosion with our comprehensive Singularity Wizard roadmap. Track your progress through cognitive foundations, technical skills, and lifestyle practices.",
       "url": "https://singularity.t8l.dev/",
