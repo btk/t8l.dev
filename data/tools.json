@@ -19,6 +19,12 @@
       "category": "Generator"
     },
     {
+      "name": "GDD-to-Task",
+      "description": "Convert Game Design Documents to tasks. Paste your GDD and click \"Generate Tasks\" to get actionable task lists from your game design document.",
+      "url": "https://gddtotask.t8l.dev/",
+      "category": "Generator"
+    },
+    {
       "name": "TinySVG",
       "description": "Optimize and simplify your SVG files with precision. Remove metadata, inline styles, collapse groups, and more to make your SVGs smaller and cleaner.",
       "url": "https://tinysvg.t8l.dev/",
